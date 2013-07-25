@@ -1,0 +1,9 @@
+.validationErr { 
+	color: red;  
+	font-weight:bold
+}
+
+.successMsg{
+	color: green;  
+	font-weight:bold
+}

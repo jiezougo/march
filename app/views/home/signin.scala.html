@@ -1,0 +1,20 @@
+@(signInform: form.SigninForm)
+@layout.page(title = "Biz Wise")(backBtn=false) { 
+<div class="successMsg">@flash.get("success")</div>
+<form id="signin" action="/signin" method="post" >
+  <fieldset>
+    <label for="emailInput">Sign In</label>
+    <div class="validationErr">@signInform.authError</div>
+    <input id='emailInput' type="text" placeholder="Email" value="@signInform.email" data-clear-btn="true" name='email'>
+    <div class="validationErr">@signInform.emailError</div>
+    <input id='pwdInput' type="password" placeholder="Password (Case Sensitive)"  data-clear-btn="true" name='pwd' value="@signInform.pwd">
+    <div class="validationErr">@signInform.pwdError</div>
+    <a href="">Forget Your Password?</a>
+     <input id="checkbox-r"  type="checkbox"  data-inline="true"><label for="checkbox-r">Remember me</label>
+    <input type="submit" id="signinBtn" data-theme="b"  data-inline="true" value="Sign in">
+    <div>Don't have an accout? Get your own personal business advisor.</div>
+   <a href="/showSignup" data-role="button" data-theme="b"  data-inline="true">Sign up</a>
+  </fieldset>
+  </form>
+}
+
