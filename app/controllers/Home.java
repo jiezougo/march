@@ -15,6 +15,7 @@ import play.data.Form;
 import play.db.jpa.JPA;
 import play.db.jpa.Transactional;
 import model.User;
+import model.UserBizMap;
 
 public class Home extends Controller {
 
@@ -45,7 +46,7 @@ public class Home extends Controller {
 			
 		}
 		if (!valid)
-			return ok(signup.render(form));
+			return redirect(routes.Home.index());
 		else{
 			//persist
 			User aUser=new User();
@@ -65,6 +66,7 @@ public class Home extends Controller {
 		Form<SigninForm> form=new Form(SigninForm.class).bindFromRequest();
 		SigninForm loginForm=form.get();
         boolean valid=loginForm.fValidate();
+        User loginUser=null;
 		if (valid){
 			//authenticate user
 			 Query aQuery=JPA.em().createQuery("from User where email=? and pwd=?");
@@ -74,14 +76,29 @@ public class Home extends Controller {
 		        if(users==null || users.size()<=0){
 		        	loginForm.authError="Invalid sign in email and password combination.";
 		        	valid=false;
-		        	
+		        }else{
+		        	valid=true;
+		        	loginUser=users.get(0);
 		        }
 		}
 		if(valid){
-			return ok(search.render());
+			session().put(util.Constants.SESSION_USERID, loginUser.id.toString());
+			 Query aQuery=JPA.em().createQuery("from UserBizMap where Id.uId=?");
+			 aQuery.setParameter(1, loginUser.id);
+			 List<UserBizMap> map=aQuery.getResultList();
+			 if (map.size()>0){
+				 return redirect("/myBiz");
+			 }else{
+				 return  redirect("/showSearch");
+			 }
 		}else{
 			return ok(signin.render(loginForm));
 		}
+	}
+	
+	public static Result logout() {
+		 session().remove(util.Constants.SESSION_USERID);
+		 return  redirect("/");
 	}
 }
 

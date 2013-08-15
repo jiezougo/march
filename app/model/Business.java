@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @javax.persistence.Entity
 @Table(name="m_business")
@@ -15,51 +16,54 @@ public class Business {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="id")
-	Long id;
+	public Long id;
 	
 	@Column(name="name",nullable=false)
-	String name;
+	public String name;
 	
 	@Column(name="address",nullable=false)
-	String address;
+	public String address;
 	
 	@Column(name="city",nullable=false)
-	String city;
+	public String city;
 	
 	@Column(name="state",nullable=false)
-	String state;
+	public String state;
 	
 	@Column(name="postal_code",nullable=false)
-	String postCode;
+	public String postCode;
 	
 	@Column(name="latitude",nullable=false)
-	Float latitude;
+	public Double latitude;
 	
 	@Column(name="longtitude",nullable=false)
-	Float longitude;
+	public Double longitude;
 	
 	@Column(name="phone")
-	String phone;
+	public String phone;
 	
 	@Column(name="application_date")
-	Date appDate;
+	public Date appDate;
 
 	@Column(name="owner_name")
-	String ownerName;
+	public String ownerName;
 	
 	@Column(name="category")
-	Long cat;
+	public Long cat;
 	
 	@Column(name="note")
-	String note;
+	public String note;
 	
 	@Column(name="active", nullable=false)
-	Boolean active;
+	public Boolean active;
 	
 	@Column(name="virtual", nullable=false)
-	Boolean virtual;
+	public Boolean virtual;
 	
 	@Column(name="last_update", nullable=false)
-	Date lastUpdate;
+	public Date lastUpdate;
+	
+	@Transient
+	public double dist;
 	
 }

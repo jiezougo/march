@@ -26,8 +26,4 @@ public class User {
 	
 	@Column(name="password",nullable=false)
 	public String pwd;
-	
-	
-	
-
 }
