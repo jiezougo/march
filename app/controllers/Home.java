@@ -46,7 +46,7 @@ public class Home extends Controller {
 			
 		}
 		if (!valid)
-			return redirect(routes.Home.index());
+			return ok(signup.render(form));
 		else{
 			//persist
 			User aUser=new User();
@@ -57,7 +57,7 @@ public class Home extends Controller {
 		
 			JPA.em().persist(aUser);
 			 flash("success", "Signup successfully. Please login to use the system.");
-			return index();
+			 return redirect("/");
 		}
 	}
 

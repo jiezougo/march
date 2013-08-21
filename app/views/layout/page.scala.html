@@ -1,4 +1,4 @@
-@(title: String)(backBtn:Boolean=true)(content: Html)
+@(title:String="BizWise", backBtn:String="Back", pageId:String=null, header:Html=Html(""),content: Html, footer:Html=Html(""))
 <!DOCTYPE html> 
 <html>
 
@@ -9,17 +9,22 @@
 	<link rel="stylesheet" href="/assets/stylesheets/main.css" />  
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="//code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-	<title>BizWise</title>
+	<title>@title</title>
 </head> 
 
 <body> 
 
-<div data-role="page">
+<div data-role="page"
+	@if( pageId!=null){
+	id="@pageId"
+	}
+>
 	<div data-role="header" data-position="fixed">
-	@if( backBtn==true){
-	<a  href="/" data-theme="b">Cancel</a>
+	@if( backBtn!=null){
+	<a  href="/" data-theme="b">@backBtn</a>
 	}
 		<h1><img src="/assets/images/logo.jpg" height="20"></h1>
+		@header
 	</div><!-- /header -->
 
 	<div data-role="content">	
@@ -27,6 +32,7 @@
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-position="fixed">
+		@footer
 		<h4>BizWise 2013 copy right</h4>
 	</div><!-- /footer -->
 	
