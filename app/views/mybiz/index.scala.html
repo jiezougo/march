@@ -1,7 +1,10 @@
-@layout.tab(title = "My Biz")("myBiz")(backBtn=false){ 
+@_content={ 
 <h1>Peer ranking</h1>
 <ul data-role="listview">
 	<li></li>
 	<li></li>
 </ul>  
 }
+@_footer={@layout.tab(active ="myBiz")}
+
+@layout.page(title = "My Biz",content=_content,footer=_footer)

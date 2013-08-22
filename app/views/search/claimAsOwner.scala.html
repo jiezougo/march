@@ -1,6 +1,6 @@
 @(b: model.Business)
-@layout.search(title = "Claim as owner")(true) { 
-<form id="claimAsOwner" action="/claimAsOwner" method="post">
+@_content={ 
+<form id="claimAsOwner" action="/claimAsOwner" method="post" data-ajax="false">
   <fieldset>
    <input type="hidden" value="@b.id" name="bId">
    <label>You must be the owner or authorized manager of <strong>@b.name</strong> in order to claim the owner of business on BizWise.</label>
@@ -10,4 +10,5 @@
   </fieldset>
   </form>
 }
+@layout.page(title = "Claim as owner",content=_content)
 

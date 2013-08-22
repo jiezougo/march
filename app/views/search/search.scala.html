@@ -1,9 +1,10 @@
 @(bs: java.util.List[model.Business])
-@layout.search(title = "Find a Business")(false) { 
-<ul data-role="listview" data-filter="true" data-filter-placeholder="Search...">
+@_content={<ul data-role="listview" data-filter="true" data-filter-placeholder="Search...">
 	@for(b <- bs) {
-  		<li><a href="/bizDetail?id=@b.id">@b.name <br/>@b.address<br/> @b.city, @b.state @b.postCode @b.dist mi.</a></li>
+  		<li><a href="/bizDetail?id=@b.id" data-ajax="false">@b.name <br/>@b.address<br/> @b.city, @b.state @b.postCode @b.dist mi.</a></li>
 	} 
-</ul>  
-}
+	</ul>  
+	}
+
+@layout.page(content=_content, pageId="searchPage",backBtn=null)
 
