@@ -5,9 +5,9 @@
         			height: 200px; }
     </style>
     <p>
-    <div>Business: @b.name</div>
+    <div>Business: @b.bizName</div>
     <div>Owner:@b.ownerName</div> 
-    <div>Since:@b.appDate</div> 
+    <div>Since:@b.dateApplied</div> 
     </p>
     <p>
     <div>@b.address</div>
@@ -30,7 +30,7 @@
             mapOptions);
         var marker = new google.maps.Marker({
             position: myLatlng,
-            title:'@b.name'
+            title:'@b.bizName'
         });
 
         // To add the marker to the map, call setMap();

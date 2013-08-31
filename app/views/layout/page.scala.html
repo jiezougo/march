@@ -1,11 +1,13 @@
-@(title:String="BizWise", backBtn:String="Back", pageId:String=null, header:Html=Html(""),content: Html, footer:Html=Html(""),logoutBtn:Boolean=true)
+@(title:String="Bizwise", backBtn:String="Back", pageId:String=null, header:Html=Html(""),content: Html, footer:Html=Html(""),logoutBtn:Boolean=true)
 <!DOCTYPE html> 
 <html>
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no"/>
-	<link rel="stylesheet" href="//code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+	<link rel="stylesheet" href="/assets/stylesheets/jquery.mobile-1.3.1.css" />  
+	@**<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.1.min.css" />**@ 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.1.min.css" /> 
 	<link rel="stylesheet" href="/assets/stylesheets/main.css" />  
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="//code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
@@ -20,13 +22,13 @@
 	id="@pageId"
 	}
 >
-	<div data-role="header" data-position="fixed">
+	<div data-role="header" data-position="fixed" data-theme="f">
 	@if( backBtn!=null){
-	<a  data-rel="back" data-theme="b">@backBtn</a>
+	<a  data-rel="back" data-theme="a">@backBtn</a>
 	}
 		<h1>@**<img src="/assets/images/logo.jpg" height="20">**@@title</h1>
 		@if( logoutBtn==true){
-			<a  href="/logout" data-theme="b" class="ui-btn-right">Logout</a>
+			<a  href="/logout"  data-theme="a" class="ui-btn-right">Logout</a>
 		}
 		@header
 	</div><!-- /header -->
@@ -35,9 +37,9 @@
 		@content
 	</div><!-- /content -->
 	
-	<div data-role="footer" data-position="fixed">
-		@footer
-		<h4>BizWise 2013 copy right</h4>
+	<div data-role="footer" data-position="fixed" data-theme="f">
+	@footer
+		<h6>&copy;2013 Mission Public, Inc.</h6>
 	</div><!-- /footer -->
 	
 </div><!-- /page -->

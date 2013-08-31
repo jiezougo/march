@@ -4,28 +4,29 @@ import java.util.List;
 
 import javax.persistence.Query;
 
+import com.google.gson.Gson;
+
 import form.ClaimAsOwnerForm;
 import form.SigninForm;
-
 import model.Business;
 import model.User;
 import model.UserBizMap;
 import model.UserBizMap.ID;
-
 import play.data.Form;
 import play.db.jpa.JPA;
 import play.mvc.Controller;
 import play.mvc.Result;
+import util.RestfulClient;
 import views.html.search.*;
 import model.Business;
 
 public class Search extends Controller{
-	@play.db.jpa.Transactional(readOnly = true)
-	  public static Result index() {
+	//@play.db.jpa.Transactional(readOnly = true)
+	  public static Result index() throws Exception{
 		  /*
 		   * get the destination geo from client browser
 		   */
-		   double myLati=37.7886;
+		  /* double myLati=37.7886;
 		   double myLongi=-122.394;
 		   //10 miles
 		   double distance=10.0;
@@ -45,7 +46,10 @@ public class Search extends Controller{
 		    	for (Business aBs: bs){
 		    		aBs.dist=(getDistance(myLati, myLongi, aBs.latitude, aBs.longitude));
 		    	}
-		    }
+		    }*/
+		    String json=RestfulClient.getJSON("/business/bizlist");
+		    Gson gson=new Gson();
+		    Business[] bs=gson.fromJson(json, Business[].class);
 	        return ok(search.render(bs));
 	    }
 	
@@ -59,10 +63,11 @@ public class Search extends Controller{
 		return d;
 	}
 
-	@play.db.jpa.Transactional(readOnly = true)
-	  public static Result showBizDetail() {
-		  long id=Long.parseLong(request().getQueryString("id"));
-		   Business bz=JPA.em().find(Business.class, id);
+	  public static Result showBizDetail() throws Exception{
+		  String id=request().getQueryString("id");
+		  String json=RestfulClient.getJSON("/business/biz?id="+id);
+		  Gson gson=new Gson();
+		   Business bz=gson.fromJson(json,Business.class);
 	       return ok(bizDetail.render(bz));
 	    }
 	
