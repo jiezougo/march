@@ -89,7 +89,7 @@ public class Home extends Controller {
 			 if (map.size()>0){
 				 return redirect("/myBiz");
 			 }else{
-				 return  redirect("/showSearch");
+				 return  redirect("/showSearchMap");
 			 }
 		}else{
 			return ok(signin.render(loginForm));

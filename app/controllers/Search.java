@@ -22,7 +22,7 @@ import model.Business;
 
 public class Search extends Controller{
 	//@play.db.jpa.Transactional(readOnly = true)
-	  public static Result index() throws Exception{
+	  public static Result showSearchListView() throws Exception{
 		  /*
 		   * get the destination geo from client browser
 		   */
@@ -51,6 +51,19 @@ public class Search extends Controller{
 		    Gson gson=new Gson();
 		    Business[] bs=gson.fromJson(json, Business[].class);
 	        return ok(search.render(bs));
+	    }
+	  
+	  public static Result getSearchResultJSON() throws Exception{
+		  String json=RestfulClient.getJSON("/business/bizlist");
+		  response().setContentType("text/json");
+		  return ok(json);
+	  }
+	  
+	  public static Result showSearchMapView() throws Exception{
+		    String json=RestfulClient.getJSON("/business/bizlist");
+		    Gson gson=new Gson();
+		    Business[] bs=gson.fromJson(json, Business[].class);
+	        return ok(searchMapView.render());
 	    }
 	
 	private static double getDistance(double myLati, double myLongi,

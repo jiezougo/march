@@ -1,3 +1,13 @@
+body{
+	font-size:13px;
+	font-weight: normal;
+}
+
+.widget{
+	/*margin-left:1em;*/
+	/*margin-right:1em;*/
+	margin-bottom:2em;
+}
 .validationErr { 
 	color: red;  
 	font-weight:bold

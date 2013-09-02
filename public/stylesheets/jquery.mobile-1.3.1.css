@@ -1067,7 +1067,7 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-loader-default { background: none; filter: Alpha(Opacity=18); opacity: .18; width: 46px; height: 46px; margin-left: -23px; margin-top: -23px; }
 .ui-loader-verbose { width: 200px; filter: Alpha(Opacity=88); opacity: .88; box-shadow: 0 1px 1px -1px #fff; height: auto; margin-left: -110px; margin-top: -43px; padding: 10px; }
 .ui-loader-default h1 { font-size: 0; width: 0; height: 0; overflow: hidden; }
-.ui-loader-verbose h1 { font-size: 16px; margin: 0; text-align: center; }
+.ui-loader-verbose h1 { font-size: 13px; margin: 0; text-align: center; }
 .ui-loader .ui-icon { background-color: #000; display: block; margin: 0; width: 44px; height: 44px; padding: 1px; -webkit-border-radius: 36px; border-radius: 36px; }
 .ui-loader-verbose .ui-icon { margin: 0 auto 10px; filter: Alpha(Opacity=75); opacity: .75; }
 .ui-loader-textonly { padding: 15px; margin-left: -115px; }
@@ -1077,8 +1077,8 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-mobile-rendering > * { visibility: hidden; }
 /*headers, content panels*/
 .ui-bar, .ui-body { position: relative; padding: .4em 15px; overflow: hidden; display: block; clear:both; }
-.ui-bar { font-size: 16px; margin: 0; }
-.ui-bar h1, .ui-bar h2, .ui-bar h3, .ui-bar h4, .ui-bar h5, .ui-bar h6 { margin: 0; padding: 0; font-size: 16px; display: inline-block; }
+.ui-bar { font-size: 13px; margin: 0; }
+.ui-bar h1, .ui-bar h2, .ui-bar h3, .ui-bar h4, .ui-bar h5, .ui-bar h6 { margin: 0; padding: 0; font-size: 13px; display: inline-block; }
 .ui-header, .ui-footer { position: relative; zoom: 1; }
 .ui-mobile .ui-header, .ui-mobile .ui-footer { border-left-width: 0; border-right-width: 0; }
 .ui-header .ui-btn-left,
@@ -1097,7 +1097,7 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-header > .ui-btn-icon-notext,
 .ui-header-fixed.ui-fixed-hidden > .ui-btn-icon-notext { top: 6px; }
 .ui-header-fixed > .ui-btn-icon-notext { top: 7px;}
-.ui-header .ui-title, .ui-footer .ui-title { min-height: 1.1em; text-align: center; font-size: 16px; display: block; margin: .6em 30% .8em; padding: 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; outline: 0 !important; }
+.ui-header .ui-title, .ui-footer .ui-title { min-height: 1.1em; text-align: center; font-size: 13px; display: block; margin: .6em 30% .8em; padding: 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; outline: 0 !important; }
 .ui-footer .ui-title { margin: .6em 15px .8em; }
 /* content area*/
 .ui-content { border-width: 0; overflow: visible; overflow-x: hidden; padding: 15px; }
@@ -2005,7 +2005,7 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-mini { margin-top: .25em; margin-bottom: .25em; }
 .ui-btn-left, .ui-btn-right, .ui-input-clear, .ui-btn-inline,
 .ui-grid-a .ui-btn, .ui-grid-b .ui-btn, .ui-grid-c .ui-btn, .ui-grid-d .ui-btn, .ui-grid-e .ui-btn, .ui-grid-solo .ui-btn { margin-right: 5px; margin-left: 5px; }
-.ui-btn-inner { font-size: 16px; padding: .6em 20px; min-width: .75em; display: block; position: relative; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; zoom: 1; }
+.ui-btn-inner { font-size: 13px; padding: .6em 20px; min-width: .75em; display: block; position: relative; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; zoom: 1; }
 .ui-btn input, .ui-btn button { z-index: 2; }
 .ui-btn-left, .ui-btn-right, .ui-btn-inline { display: inline-block; vertical-align: middle; }
 .ui-mobile .ui-btn-left, .ui-mobile .ui-btn-right, .ui-btn-left > .ui-btn, .ui-btn-right > .ui-btn { margin: 0; } /* .ui-mobile to increase specificity level */
@@ -2016,9 +2016,9 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-footer .ui-btn-block { display: block; }
 .ui-header .ui-btn-inner,
 .ui-footer .ui-btn-inner,
-.ui-mini .ui-btn-inner { font-size: 12.5px; padding: .55em 11px .5em; }
+.ui-mini .ui-btn-inner { font-size: 9.5px; padding: .55em 9px .5em; }
 .ui-fullsize .ui-btn-inner,
-.ui-fullsize .ui-btn-inner { font-size: 16px; padding: .6em 20px; }
+.ui-fullsize .ui-btn-inner { font-size: 13px; padding: .6em 20px; }
 .ui-btn-icon-notext { width: 24px; height: 24px; }
 .ui-btn-icon-notext .ui-btn-inner { padding: 0; height: 100%; }
 .ui-btn-icon-notext .ui-btn-inner .ui-icon { margin: 2px 1px 2px 3px; float: left; }
@@ -2080,14 +2080,14 @@ div.ui-btn-text { width: auto; }
 .ui-disabled .ui-btn-hidden { display: none; }
 .ui-disabled { z-index: 1; }
 .ui-field-contain .ui-btn.ui-submit { margin: 0; }
-label.ui-submit { font-size: 16px; line-height: 1.4; font-weight: normal; margin: 0 0 .3em; display: block; }
+label.ui-submit { font-size: 13px; line-height: 1.4; font-weight: normal; margin: 0 0 .3em; display: block; }
 @media all and (min-width: 28em){
 	.ui-field-contain label.ui-submit { vertical-align: top; display: inline-block; width: 20%; margin: 0 2% 0 0; }
 	.ui-field-contain .ui-btn.ui-submit { width: 78%; display: inline-block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
 	.ui-hide-label .ui-btn.ui-submit { width: auto; display: block; }
 }
 .ui-collapsible-inset { margin: .5em 0; }
-.ui-collapsible-heading { font-size: 16px; display: block; margin: 0 -15px; padding: 0; position: relative; }
+.ui-collapsible-heading { font-size: 13px; display: block; margin: 0 -15px; padding: 0; position: relative; }
 .ui-collapsible-inset .ui-collapsible-heading { margin: 0; }
 .ui-collapsible-heading .ui-btn { text-align: left; margin: 0; border-left-width: 0; border-right-width: 0; }
 .ui-collapsible-inset .ui-collapsible-heading .ui-btn { border-right-width: 1px; border-left-width: 1px; }
@@ -2150,7 +2150,7 @@ label.ui-submit { font-size: 16px; line-height: 1.4; font-weight: normal; margin
 .ui-controlgroup.ui-mini, fieldset.ui-controlgroup.ui-mini { margin: .25em 0; }
 .ui-field-contain .ui-controlgroup, .ui-field-contain fieldset.ui-controlgroup { margin: 0; }
 .ui-bar .ui-controlgroup { margin: 0 5px; }
-.ui-controlgroup-label { font-size: 16px; line-height: 1.4; font-weight: normal; margin: 0 0 .4em; }
+.ui-controlgroup-label { font-size: 13px; line-height: 1.4; font-weight: normal; margin: 0 0 .4em; }
 .ui-controlgroup-controls label.ui-select,
 .ui-controlgroup-controls label.ui-submit { position: absolute; left: -9999px; }
 .ui-controlgroup li { list-style: none; }
@@ -2164,7 +2164,7 @@ label.ui-submit { font-size: 16px; line-height: 1.4; font-weight: normal; margin
 .ui-controlgroup .ui-btn-icon-notext .ui-btn-inner .ui-icon { position: absolute; top: 50%; right: 50%; margin: -9px -9px 0 0; }
 .ui-controlgroup-horizontal .ui-btn-inner { text-align: center; }
 .ui-controlgroup-horizontal.ui-mini .ui-btn-inner { height: 16px; line-height: 16px; }
-.ui-controlgroup .ui-checkbox label, .ui-controlgroup .ui-radio label { font-size: 16px; }
+.ui-controlgroup .ui-checkbox label, .ui-controlgroup .ui-radio label { font-size: 13px; }
 .ui-controlgroup-horizontal .ui-controlgroup-controls:before,
 .ui-controlgroup-horizontal .ui-controlgroup-controls:after { content: ""; display: table; }
 .ui-controlgroup-horizontal .ui-controlgroup-controls:after { clear: both; }
@@ -2309,7 +2309,7 @@ label.ui-submit { font-size: 16px; line-height: 1.4; font-weight: normal; margin
 	margin: .5em 7px;
 }
 .ui-popup .ui-title {
-	font-size: 16px;
+	font-size: 13px;
 	font-weight: bold;
 	margin-top: .5em;
 	margin-bottom: .5em;
@@ -2365,7 +2365,7 @@ label.ui-submit { font-size: 16px; line-height: 1.4; font-weight: normal; margin
 	.ui-popup .ui-field-contain .ui-controlgroup-label,
 	.ui-popup .ui-field-contain label.ui-select,
 	.ui-popup .ui-field-contain label.ui-input-text {
-		font-size: 16px; line-height: 1.4; display: block; font-weight: normal; margin: 0 0 .3em;
+		font-size: 13px; line-height: 1.4; display: block; font-weight: normal; margin: 0 0 .3em;
 	}
 	.ui-popup .ui-field-contain .ui-btn.ui-submit,
 	.ui-popup .ui-field-contain .ui-controlgroup-controls,
@@ -2441,7 +2441,7 @@ label.ui-submit { font-size: 16px; line-height: 1.4; font-weight: normal; margin
 .ui-select .ui-btn-icon-right.ui-li-has-count .ui-li-count { right: 45px; }
 .ui-select .ui-mini.ui-btn-icon-right.ui-li-has-count .ui-li-count { right: 32px; }
 /* labels */
-label.ui-select { font-size: 16px; line-height: 1.4; font-weight: normal; margin: 0 0 .3em; display: block; }
+label.ui-select { font-size: 13px; line-height: 1.4; font-weight: normal; margin: 0 0 .3em; display: block; }
 /*listbox*/
 .ui-select .ui-btn-text, .ui-selectmenu .ui-btn-text { display: block; min-height: 1em; overflow: hidden !important;
 /* This !important is required for iPad Safari specifically. See https://github.com/jquery/jquery-mobile/issues/2647 */ }
@@ -2462,9 +2462,9 @@ label.ui-select { font-size: 16px; line-height: 1.4; font-weight: normal; margin
 }
 /* when no placeholder is defined in a multiple select, the header height doesn't even extend past the close button.  this shim's content in there */
 .ui-selectmenu .ui-header h1:after { content: '.'; visibility: hidden; }
-label.ui-input-text { font-size: 16px; line-height: 1.4; display: block; font-weight: normal; margin: 0 0 .3em; }
-input.ui-input-text, textarea.ui-input-text { background-image: none; padding: .4em; margin: .5em 0; min-height: 1.4em; line-height: 1.4em; font-size: 16px; display: block; width: 100%; outline: 0; }
-input.ui-mini, .ui-mini input, textarea.ui-mini { font-size: 14px; }
+label.ui-input-text { font-size: 13px; line-height: 1.4; display: block; font-weight: normal; margin: 0 0 .3em; }
+input.ui-input-text, textarea.ui-input-text { background-image: none; padding: .4em; margin: .5em 0; min-height: 1.4em; line-height: 1.4em; font-size: 13px; display: block; width: 100%; outline: 0; }
+input.ui-mini, .ui-mini input, textarea.ui-mini { font-size: 11px; }
 div.ui-input-text input.ui-input-text, div.ui-input-text textarea.ui-input-text,
 .ui-input-search input.ui-input-text { border: none; width: 100%; padding: .4em 0; margin: 0; display: block; background: transparent none; outline: 0 !important; }
 .ui-input-search, div.ui-input-text { margin: .5em 0; background-image: none; position: relative; }
@@ -2620,7 +2620,7 @@ ol.ui-listview, ol.ui-listview .ui-li-divider { counter-reset: listnumbering; }
 .ui-collapsible-themed-content .ui-listview:not(.ui-listview-inset) > .ui-li.ui-last-child { border-bottom-width: 0; }
 .ui-li .ui-btn-text a.ui-link-inherit { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
 .ui-li-static { background-image: none; }
-.ui-li-divider { padding: .5em 15px; font-size: 14px; font-weight: bold; }
+.ui-li-divider { padding: .5em 15px; font-size: 11px; font-weight: bold; }
 ol.ui-listview .ui-link-inherit:before, ol.ui-listview .ui-li-static:before, .ui-li-dec { font-size: .8em; display: inline-block; padding-right: .3em; font-weight: normal; counter-increment: listnumbering; content: counter(listnumbering) ". "; }
 ol.ui-listview .ui-li-jsnumbering:before { content: "" !important; } /* to avoid chance of duplication */
 .ui-listview .ui-li > .ui-btn-text {
@@ -2666,8 +2666,8 @@ ol.ui-listview .ui-li-jsnumbering:before { content: "" !important; } /* to avoid
 .ui-li-has-count .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-count, .ui-li-divider.ui-li-has-count { padding-right: 45px; }
 .ui-li-has-arrow .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-arrow { padding-right: 40px; }
 .ui-li-has-arrow.ui-li-has-count .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-arrow.ui-li-has-count { padding-right: 75px; }
-.ui-li-heading { font-size: 16px; font-weight: bold; display: block; margin: .6em 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
-.ui-li-desc { font-size: 12px; font-weight: normal; display: block; margin: -.5em 0 .6em; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.ui-li-heading { font-size: 13px; font-weight: bold; display: block; margin: .6em 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.ui-li-desc { font-size: 9px; font-weight: normal; display: block; margin: -.5em 0 .6em; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
 ol.ui-listview > .ui-li .ui-li-heading { display: inline-block; width: 100%; margin-left: -1.3em; text-indent: 1.3em; vertical-align: middle; }
 ol.ui-listview > .ui-li .ui-li-desc:not(.ui-li-aside) { text-indent: 1.55em; }
 .ui-li-thumb, .ui-listview .ui-li-icon { position: absolute; left: 1px; top: 0; max-height: 80px; max-width: 80px; }
@@ -2680,7 +2680,7 @@ ol.ui-listview > .ui-li .ui-li-desc:not(.ui-li-aside) { text-indent: 1.55em; }
 .ui-li-divider { cursor: default; }
 .ui-li-has-alt .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-alt { padding-right: 53px; }
 .ui-li-has-alt.ui-li-has-count .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-alt.ui-li-has-count { padding-right: 88px; }
-.ui-li-has-count .ui-li-count { position: absolute; font-size: 11px; font-weight: bold; padding: .2em .5em; top: 50%; margin-top: -.9em; right: 10px; }
+.ui-li-has-count .ui-li-count { position: absolute; font-size: 9px; font-weight: bold; padding: .2em .5em; top: 50%; margin-top: -.9em; right: 10px; }
 .ui-li-has-count.ui-li-divider .ui-li-count, .ui-li-has-count .ui-link-inherit .ui-li-count { margin-top: -.95em; }
 .ui-li-has-arrow.ui-li-has-count .ui-li-count { right: 40px; }
 .ui-li-has-alt.ui-li-has-count .ui-li-count { right: 53px; }
@@ -2701,7 +2701,7 @@ ol.ui-listview > .ui-li .ui-li-desc:not(.ui-li-aside) { text-indent: 1.55em; }
     .ui-li .ui-btn-text { overflow:  visible; }
 }
 label.ui-slider {
-	font-size: 16px;
+	font-size: 13px;
 	line-height: 1.4;
 	font-weight: normal;
 	margin: 0;
@@ -2738,7 +2738,7 @@ input.ui-input-text.ui-slider-input {
 	width: 40px;
 	height: 22px;
 	line-height: 22px;
-	font-size: 14px;
+	font-size: 11px;
 	border-width: 0;
 	background-image: none;
 	font-weight: bold;
@@ -2856,7 +2856,7 @@ div.ui-slider-switch.ui-mini {
 	text-align: center;
 	width: 100%;
 	overflow: hidden;
-	font-size: 16px;
+	font-size: 13px;
 	top: 0;
 	line-height: 2;
 	min-height: 100%;
@@ -2865,7 +2865,7 @@ div.ui-slider-switch.ui-mini {
 	cursor: pointer;
 }
 .ui-slider-switch.ui-mini .ui-slider-label {
-	font-size: 14px;
+	font-size: 11px;
 }
 .ui-slider-switch .ui-slider-label-a {
 	z-index: 1;

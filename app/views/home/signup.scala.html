@@ -1,4 +1,5 @@
 @(sform: form.SignupForm)
+@_header={<a  data-rel="back" data-theme="a" data-icon="chevron-left">Back</a><h1>Sign up Bizwise</h1>}
 @_content= { 
 <form id="signup" action="/signup" method="post" >
   <fieldset>
@@ -18,9 +19,10 @@
     <div class="validationErr">@sform.cpwdError</div>
     <label for="tcheck">I have read the terms</label><input id="tcheck"  name="tcheck" type="checkbox"  value="true" data-inline="true"/>
      <div class="validationErr">@sform.tCheckError</div>
-     <input type="submit" id="signupBtn" data-theme="b"  data-inline="true" value="Create Account"/>
+     <input type="submit" id="signupBtn" data-theme="a"  value="Create Account"/>
   </fieldset>
   </form>  
 }
-@layout.page(content=_content,logoutBtn=false)
+@_footer={@layout.defaultFooter()}
+@layout.layout(header=_header,content=_content,footer=_footer)
 
