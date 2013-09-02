@@ -1,14 +1,13 @@
-@(bs: Array[model.Business])
+
 @_header=@_header={<a  href="/" data-theme="a" data-icon="fahome">Home</a>
 <h1>Search a business</h1>
 <a  href="/showSearchMap" data-theme="a" data-icon="map-marker">Map</a>}
 @_content={
-<ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search...">
-	@for(b <- bs) {
-  		<li><a href="/bizDetail?id=@b.id" data-ajax="false"><h4>@b.bizName</h4><p>@b.address</p><p>@b.city, @b.state @b.zipCode</p></a><span class="ui-li-count">@b.distance mi.</span></li>
-	} 
-	</ul>  
-	}
+<ul id="bizListUL" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search...">
+</ul>  
+<script src="/assets/javascripts/search/search.js"></script>
+}
 
-@layout.layout(content=_content, pageId="searchPageList",header=_header)
+@layout.layout(content=_content, pageId="searchListPage",header=_header)
+
 

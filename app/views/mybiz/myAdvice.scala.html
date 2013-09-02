@@ -1,5 +1,18 @@
-@_content={ 
-<h1>Tip of the day</h1> 
+
+@_header=@_header={<a  href="/" data-theme="a" data-icon="fahome">Home</a>
+<h1>My advisors</h1>
 }
-@_footer={@layout.tab(active="myAdvice")}
-@layout.page(title = "BizWise Advisor",content=_content,footer=_footer)
+@_content={ 
+<div data-role="collapsible" data-theme="a">
+<h5>Daily tips</h5>
+<div>chart</div>
+</div>
+<div data-role="collapsible" data-theme="a">
+<h5>My recommendations</h5>
+<div>chart</div>
+</div>
+}
+</div>
+@_footer={@layout.tab(active ="myAdvice")}
+
+@layout.layout(header=_header,content=_content,footer=_footer)

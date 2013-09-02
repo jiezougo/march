@@ -1,48 +1,28 @@
-@(b: model.Business)
+@(id:String)
+@_header={<a data-rel="back" data-theme="a" data-icon="fasearch">Search</a><h1>Business Detail</h1>}
+@_footer={
+   <a href="/claimAsOwner?id=@id" data-role="button" data-icon="heart">Claim</a>
+	<a href="#" data-role="button" data-icon="eye-open">Follow</a>
+	<a href="#" data-role="button"  data-icon="comment">Recommend</a>
+	</div><!-- /navbar -->}
 @_content={
+    <input type="hidden" id="bizId" value=@id>
 	<style type="text/css">
       #map-canvas {  width: 100%;
-        			height: 200px; }
+        			height: 100px; }
     </style>
-    <p>
-    <div>Business: @b.bizName</div>
-    <div>Owner:@b.ownerName</div> 
-    <div>Since:@b.dateApplied</div> 
-    </p>
-    <p>
-    <div>@b.address</div>
-    <div>@b.city, @b.state @b.postCode</div>
-    <div><a href="tel:@b.phone">@b.phone</a></div>
-    </p>
-    <div id="map-canvas"></div>
-    <p>
-<a href="/claimAsOwner?id=@b.id" data-role="button" data-inline="true" data-theme="b">Claim as owner</a>
-</p>
- <script type="text/javascript">
-      function initialize() {
-    	var myLatlng=new google.maps.LatLng(@b.latitude, @b.longitude);
-        var mapOptions = {
-          center: myLatlng,
-          zoom: 18,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map($("#map-canvas")[0],
-            mapOptions);
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            title:'@b.bizName'
-        });
-
-        // To add the marker to the map, call setMap();
-        marker.setMap(map);
-      }
-      $("#"+"bizDetailPage"+@b.id).on( "pageinit", function( event ) {
-    	  console.dir('here');
-    	  initialize();
-    	});
-    </script>
+    <ul id="bizDetailUL" data-role="listview" data-inset="true">
+    <li data-role="list-divider">Facts</li>
+    <li id="bizDetailLi">
+    </li>
+    <li><div id="map-canvas"></div></li>
+    <li data-role="list-divider">Social Ratings</li>
+    <li><img src="/assets/images/yelp.png" class="ui-li-icon"/><span class="yelp">Yelp</span><div class="ui-li-aside" id='yelpRating'></div></li>
+    </ul>  
+    <script src="/assets/javascripts/raty/jquery.raty.min.js"></script>
+<script src="/assets/javascripts/search/bizDetail.js"></script>
 }
-@layout.page(content=_content,pageId="bizDetailPage"+b.id)
+@layout.layout(content=_content,pageId="bizDetailPage",header=_header,footer=_footer)
 
    
 

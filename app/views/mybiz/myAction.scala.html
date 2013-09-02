@@ -1,6 +1,16 @@
+@_header=@_header={<a  href="/" data-theme="a" data-icon="fahome">Home</a>
+<h1>My actions</h1>
+}
 @_content={ 
-<h1>What's happening nearby</h1>  
+ <ul id="bizDetailUL" data-role="listview" data-inset="true">
+    <li data-role="list-divider">What's happening nearby</li>
+    <li><a href="#">School notifications</a></li>
+    <li><a href="#">Police notifications</a></li>
+ </ul>
+<ul>
 }
-@_footer={@layout.tab(active="myAction")
-}
-@layout.page(title = "BizWise Advisor",content=_content, footer=_footer)
+
+@_footer={@layout.tab(active ="myAction")}
+
+@layout.layout(header=_header,content=_content,footer=_footer)
+

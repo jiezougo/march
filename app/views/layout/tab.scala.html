@@ -1,8 +1,8 @@
 @(active:String="myBiz")
 <div data-role="navbar">
 		<ul>
-			<li><a href="/myBiz" @if(active=="myBiz"){class="ui-btn-active"}>MyBiz</a></li>
-			<li><a href="/myAdvice" @if(active=="myAdvice"){class="ui-btn-active"}>Advices</a></li>
-			<li><a href="/myAction" @if(active=="myAction"){class="ui-btn-active"}>Actions</a></li>
+			<li><a data-icon="bar-chart" href="/myBiz" @if(active=="myBiz"){class="ui-btn-active"}>MyBiz</a></li>
+			<li><a data-icon="bell" href="/myAdvice" @if(active=="myAdvice"){class="ui-btn-active"}>Advices</a></li>
+			<li><a data-icon="cogs" href="/myAction" @if(active=="myAction"){class="ui-btn-active"}>Actions</a></li>
 		</ul>
 	</div><!-- /navbar -->

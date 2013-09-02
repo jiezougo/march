@@ -47,10 +47,10 @@ public class Search extends Controller{
 		    		aBs.dist=(getDistance(myLati, myLongi, aBs.latitude, aBs.longitude));
 		    	}
 		    }*/
-		    String json=RestfulClient.getJSON("/business/bizlist");
-		    Gson gson=new Gson();
-		    Business[] bs=gson.fromJson(json, Business[].class);
-	        return ok(search.render(bs));
+		   // String json=RestfulClient.getJSON("/business/bizlist");
+		   // Gson gson=new Gson();
+		   // Business[] bs=gson.fromJson(json, Business[].class);
+	        return ok(search.render());
 	    }
 	  
 	  public static Result getSearchResultJSON() throws Exception{
@@ -60,9 +60,9 @@ public class Search extends Controller{
 	  }
 	  
 	  public static Result showSearchMapView() throws Exception{
-		    String json=RestfulClient.getJSON("/business/bizlist");
-		    Gson gson=new Gson();
-		    Business[] bs=gson.fromJson(json, Business[].class);
+		   // String json=RestfulClient.getJSON("/business/bizlist");
+		   // Gson gson=new Gson();
+		   // Business[] bs=gson.fromJson(json, Business[].class);
 	        return ok(searchMapView.render());
 	    }
 	
@@ -79,10 +79,18 @@ public class Search extends Controller{
 	  public static Result showBizDetail() throws Exception{
 		  String id=request().getQueryString("id");
 		  String json=RestfulClient.getJSON("/business/biz?id="+id);
-		  Gson gson=new Gson();
-		   Business bz=gson.fromJson(json,Business.class);
-	       return ok(bizDetail.render(bz));
+		  //Gson gson=new Gson();
+		  // Business bz=gson.fromJson(json,Business.class);
+	      return ok(bizDetail.render(id));
 	    }
+	  
+	  public static Result getBizDetailJSON() throws Exception{
+		  String id=request().getQueryString("id");
+		  String json=RestfulClient.getJSON("/business/biz?id="+id);
+		  response().setContentType("text/json");
+		  return ok(json);
+		  
+	  }
 	
 	 @play.db.jpa.Transactional(readOnly = true)
 	  public static Result showClaimAsOwner() {

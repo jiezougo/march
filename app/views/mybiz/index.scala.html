@@ -1,10 +1,17 @@
-@_content={ 
-<h1>Peer ranking</h1>
-<ul data-role="listview">
-	<li></li>
-	<li></li>
-</ul>  
+@_header=@_header={<a  href="/" data-theme="a" data-icon="fahome">Home</a>
+<h1>My business</h1>
 }
+@_content={ 
+<div data-role="collapsible" data-theme="a">
+<h5>Peer ranking</h5>
+<div>chart</div>
+</div>
+<div data-role="collapsible" data-theme="a">
+<h5>Trending</h5>
+<div>chart</div>
+</div>
+}
+</div>
 @_footer={@layout.tab(active ="myBiz")}
 
-@layout.page(title = "My Biz",content=_content,footer=_footer)
+@layout.layout(header=_header,content=_content,footer=_footer)

@@ -94,6 +94,7 @@
    };
     
  $("#searchMapViewPage").on( "pageinit", function( event ) {
+ 	 console.dir('heremap');
  	      if (navigator.geolocation)
     		{
     			navigator.geolocation.getCurrentPosition(searchMapView.onGeoSucceed,searchMapView.onGeoFail);
